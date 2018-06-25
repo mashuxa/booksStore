@@ -1,0 +1,84 @@
+// out: ../css/sprite.css
+.stitches-icon(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+    background-image: url("../imgs/sprite.png");
+    background-repeat: no-repeat;
+    display: inline-block; 
+}
+   
+ .icon { 
+    &_about-us {
+        .stitches-icon(0, 0, 29px, 34px);
+    }
+    &_arrow-right-mini {
+        .stitches-icon(-27px, 0, 9px, 11px);
+    }
+    &_arrow-bottom-red {
+        .stitches-icon(-39px, 0, 10px, 6px);
+    }
+    &_arrow-left {
+        .stitches-icon(-49px, 0, 12px, 22px);
+    }
+    &_arrow-right {
+        .stitches-icon(-61px, 0, 12px, 22px);
+    }
+    &_arrow-right-green {
+        .stitches-icon(-73px, 0, 4px, 6px);
+        margin-left: 8px; 
+    }
+    &_arrow-right-red {
+        .stitches-icon(-77px, 0, 4px, 6px);
+    }
+    &_arrow-top {
+        .stitches-icon(-81px, 0, 17px, 18px);
+    }
+    &_contact-us {
+        .stitches-icon(-98px, 0, 30px, 35px);
+    }
+    &_facebook {
+        .stitches-icon(-128px, 0, 9px, 16px);
+    }
+    &_facebook-red {
+        .stitches-icon(-30px, -16px, 14px, 27px);
+    }
+    &_fsc-logo {
+        .stitches-icon(-44px, -35px, 81px, 100px);
+    }
+    &_instagramm-red {
+        .stitches-icon(-128px, -16px, 23px, 24px);
+    }
+    &_job {
+        .stitches-icon(-151px, 0, 29px, 36px);
+    }
+    &_logo {
+        .stitches-icon(-180px, 0, 97px, 63px);
+    }
+    &_pencil {
+        .stitches-icon(0, -63px, 11px, 17px);
+        margin-right: 8px;
+    }
+    &_printerest {
+        .stitches-icon(-137px, 0, 13px, 16px);
+    }
+    &_printerest-red {
+        .stitches-icon(-11px, -63px, 21px, 26px);
+    }
+    &_search {
+        .stitches-icon(-125px, -63px, 19px, 20px);
+    }
+    &_store {
+        .stitches-icon(-144px, -63px, 16px, 20px);
+    }
+    &_twitter {
+        .stitches-icon(-160px, -63px, 19px, 16px);
+    }
+    &_twitter-red {
+        .stitches-icon(-179px, -63px, 31px, 27px);
+    }
+    &_user {
+        .stitches-icon(-211px, -63px, 20px, 21px);
+    }
+}
+
