@@ -131,13 +131,15 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+small {
+  font-size: 0.8em;
+  filter: opacity(0.8);
+}
 input,
 button {
   border: none;
   outline: none;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input[type="number"] {
+  padding-right: 0 !important;
 }
