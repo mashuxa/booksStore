@@ -6,6 +6,7 @@
     color: gray;
     font-weight: bold;
     transition-duration: 0.3s;
+    cursor: pointer;
     &_current {
       color: $clr-secondary;
     }
@@ -15,12 +16,12 @@
     justify-content: center;
     padding: 30px 10px 0;
   }
-  &__wear-with {
-  }
+
   &__item {
     text-align: center;
     color: $clr-secondary;
     padding: 20px 0;
+    display: inline-block;
   }
   &__img-wrapper {
     padding: 20px 0;
@@ -41,6 +42,21 @@
     color: $clr-primary;
   }
   &__also-like {
-    display: none;
+  }
+  &__wear-with {
+
+  }
+  &__slider {
+    transition-duration: 0.5s;
+    overflow-y: hidden;
+    overflow-x: auto;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    &_visible {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+    }
   }
 }

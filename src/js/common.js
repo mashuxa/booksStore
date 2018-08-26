@@ -1,179 +1,67 @@
-//  $(document).ready(function () {
-//      var sliderSettings = {
-//          dots: false,
-//          arrows: true,
-//          infinite: false,
-//          slidesToShow: 4,
-//          slidesToScroll: 1,
-//          responsive: [
-//              {
-//                  breakpoint: 1024,
-//                  settings: {
-//                      dots: false,
-//                      arrows: false,
-//                      infinite: false,
-//                      slidesToShow: 3,
-//                      slidesToScroll: 1
-//                  }
-//     },
-//              {
-//                  breakpoint: 600,
-//                  settings: {
-//                      dots: false,
-//                      arrows: false,
-//                      infinite: false,
-//                      slidesToShow: 2,
-//                      slidesToScroll: 1
-//                  }
-//     },
-//              {
-//                  breakpoint: 480,
-//                  settings: {
-//                      dots: false,
-//                      arrows: false,
-//                      infinite: false,
-//                      slidesToShow: 1,
-//                      slidesToScroll: 1
-//                  }
-//     }
-// ]
-//
-//      };
-//      if ($('.product-description__gallary')) {
-//          $('.product-description__gallary').slick({
-//              dots: false,
-//              arrows: false,
-//              infinite: false,
-//              slidesToShow: 5,
-//              slidesToScroll: 1,
-//              vertical: true,
-//              verticalSwiping: true,
-//              responsive: [
-//                  {
-//                      breakpoint: 1024,
-//                      settings: {
-//                          dots: false,
-//                          arrows: false,
-//                          infinite: false,
-//                          slidesToShow: 4,
-//                          slidesToScroll: 1,
-//                          vertical: true,
-//                          verticalSwiping: true
-//                      }
-//     },
-//                  {
-//                      breakpoint: 600,
-//                      settings: {
-//                          dots: false,
-//                          arrows: false,
-//                          infinite: false,
-//                          slidesToShow: 3,
-//                          slidesToScroll: 1,
-//                          verticalSwiping: true,
-//                          vertical: true
-//                      }
-//     },
-//                  {
-//                      breakpoint: 480,
-//                      settings: {
-//                          dots: false,
-//                          arrows: false,
-//                          infinite: false,
-//                          slidesToShow: 2,
-//                          slidesToScroll: 1,
-//                          verticalSwiping: true,
-//                          vertical: true
-//                      }
-//     }
-// ]
-//
-//          });
-//      }
-//
-//      if ($('.goods__wear-with')) {
-//          $('.goods__wear-with').slick(sliderSettings);
-//      }
-//
-//
-//      function initSliderAlsoLike() {
-//          $(".goods__also-like").css("display", "block");
-//          $('.goods__also-like').slick(sliderSettings);
-//          $('.goods__slider-toggle_also-like').off('click', initSliderAlsoLike);
-//      }
-//      $('.goods__slider-toggle_also-like').on('click', initSliderAlsoLike);
-//
-//
-//
-//
-//      $('.more-info__item').click(function () {
-//          $(this).next(".more-info__content").slideToggle();
-//      });
-//
-//      var productPreview = $('.product-description__product-preview');
-//      productPreview.attr("src", $(".product-description__gallary-img:first-of-type").attr("src"));
-//
-//
-//      $('.product-description__gallary-img').click(function () {
-//          productPreview.attr("src", $(this).attr("src"));
-//      });
-//
-//
-//      $('.goods__slider-toggle').click(function () {
-//          $('.goods__slider-toggle').removeClass("goods__slider-toggle_current");
-//          $(this).addClass("goods__slider-toggle_current");
-//      });
-//
-//      $('.goods__slider-toggle').click(function () {
-//          if ($(this).hasClass("goods__slider-toggle_wear-with")) {
-//              $('.goods__wear-with').fadeIn();
-//              $('.goods__also-like').fadeOut();
-//          } else {
-//              $('.goods__also-like').fadeIn();
-//              $('.goods__wear-with').fadeOut();
-//          }
-//      });
-//
-//
-//      $('.product-description__btn_add-to-cart').click(function () {
-//          $('body').addClass("blocked");
-//          $('.popup').slideDown();
-//          $('.popup__current-img').attr("src", $('.product-description__product-preview').attr("src"));
-//      });
-//
-//
-//
-//      var companyName = $(".popup__company-name");
-//      var valChar = $(".popup__val-char");
-//
-//      $('.colors-input').click(function () {
-//          $('.colors-input').removeClass("colors-input_current");
-//          $(this).addClass("colors-input_current");
-//          companyName.css("color", $(this).find("input").val());
-//      });
-//      $('.fonts-input').click(function () {
-//          $('.fonts-input').removeClass("fonts-input_current");
-//          $(this).addClass("fonts-input_current");
-//          companyName.css("font-family", $(this).find("input").val());
-//      });
-//
-//
-//      $('#popup__logo-name').keyup(function () {
-//          if ($(this).val().length < 21) {
-//              valChar.text($(this).val().length);
-//              companyName.text($(this).val());
-//          } else {
-//              alert("Max 20 caratteri");
-//          }
-//
-//      });
-//
-//
-//      $('.popup__btn_close').click(function () {
-//          $('body').removeClass("blocked");
-//          $('.popup').slideUp();
-//      });
-//
-//
-//
-//
-//  });
+// document.addEventListener('DOMContentLoaded', () => {
+
+    let productPreviewImg = document.querySelector(".product-card__product-preview");
+    let companyName = document.querySelector(".popup__company-name");
+    document.querySelector('.product-card__product-preview').setAttribute("src", document.querySelector('.product-card__gallery-img').getAttribute("src"));
+
+    document.body.addEventListener("click", (e) => {
+        let elem = e.target;
+        let elemClasses = elem.classList;
+        if (elemClasses.contains("product-card__btn_personalization")) {
+            let currentProductImgSrc = productPreviewImg.getAttribute("src");
+            document.querySelector(".popup__current-img").setAttribute("src", currentProductImgSrc);
+            document.body.classList.add("blocked");
+            document.querySelector(".popup").classList.add("popup_visible");
+
+        } else if (elemClasses.contains("product-card__gallery-img")) {
+
+            productPreviewImg.setAttribute("src", elem.getAttribute("src"));
+
+        } else if (elemClasses.contains("popup__btn_close")) {
+
+            document.body.classList.remove("blocked");
+            elem.closest(".popup").classList.remove("popup_visible");
+
+        } else if (elemClasses.contains("goods__slider-toggle") && !elemClasses.contains("goods__slider-toggle_current")) {
+
+            [].forEach.call(document.querySelectorAll(".goods__slider-toggle"), (el) => {
+                el.classList.toggle("goods__slider-toggle_current");
+            });
+            [].forEach.call(document.querySelectorAll(".goods__slider"), (el) => {
+                el.classList.toggle("goods__slider_visible");
+            });
+
+        } else if (elemClasses.contains("more-info__item")) {
+
+            elem.parentElement.querySelector(".more-info__content").classList.toggle("more-info__content_visible");
+
+        } else if (elemClasses.contains("colors-input")) {
+            [].forEach.call(document.querySelectorAll('.colors-input'), (el) => {
+                el.classList.remove("colors-input_current");
+            });
+            elemClasses.add("colors-input_current");
+            companyName.style.color = elem.getElementsByTagName("INPUT")[0].value;
+        } else if (elemClasses.contains("fonts-input")) {
+            [].forEach.call(document.querySelectorAll('.fonts-input'), (el) => {
+                el.classList.remove("fonts-input_current");
+            });
+            elemClasses.add("fonts-input_current");
+            companyName.style.fontFamily = elem.getElementsByTagName("INPUT")[0].value;
+        }
+    });
+
+    document.addEventListener("keyup", (e) => {
+        if (e.target.classList.contains("product-card__input")) {
+            let txtInput = e.target;
+            let txtInputValue = txtInput.value;
+            if (txtInputValue.length < 21) {
+                document.querySelector(".popup__val-char").innerHTML = txtInputValue.length;
+                companyName.innerHTML = txtInputValue;
+            } else {
+                alert("Max 20 caratteri");
+            }
+        }
+    });
+// });
+
+

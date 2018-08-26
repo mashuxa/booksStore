@@ -24,6 +24,7 @@ body {
 }
 
 .main {
+  @extend .container;
   flex-grow: 1;
 }
 

@@ -4,13 +4,14 @@
   padding: 10px;
   @extend .container;
   display: flex;
-  &__gallary {
+  &__gallery {
     border: 1px solid green;
     flex: 0 0 12%;
     max-height: 680px;
-    overflow: hidden;
+    overflow-y: auto;
+
   }
-  &__gallary-img {
+  &__gallery-img {
     cursor: pointer;
     display: block;
     max-width: 100%;

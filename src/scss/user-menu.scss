@@ -1,4 +1,6 @@
 .user-menu {
+  list-style: none;
+  display: flex;
   margin-left: auto;
   margin-right: -5px;
   &__item {

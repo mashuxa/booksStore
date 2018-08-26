@@ -1,10 +1,11 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 let config = {
-    entry: "./src/index.js",
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, "./dist"),
-        filename: "main.js",
+        filename: "js/main.js",
         publicPath: "dist/"
     },
     devServer: {
@@ -29,7 +30,7 @@ let config = {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    // 'style-loader',
+                    // process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader'
@@ -41,7 +42,8 @@ let config = {
                     loader: 'url-loader',
                     options: {
                         limit: 8000, // Convert images < 8kb to base64 strings
-                        name: 'images/[hash]-[name].[ext]'
+                        name: 'images/[hash]-[name].[ext]',
+                        publicPath: '../'
                     }
                 }]
             }
@@ -49,15 +51,13 @@ let config = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.css'
+            filename: './css/style.css'
         })
     ]
 };
 
-
 module.exports = (env, options) => {
     let production = options.mode === "production";
-
     let minificatorJs = new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false,
@@ -69,9 +69,6 @@ module.exports = (env, options) => {
         config.plugins.push(minificatorJs);
     }
     config.devtool = production ? false : "eval-sourcemap";
-
-
     return config;
 };
-
 module.exports = config;

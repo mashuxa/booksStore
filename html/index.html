@@ -4,242 +4,270 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="dist/style.css">
-    <script defer src="dist/main.js"></script>
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <script defer src="../src/js/templateLoader.min.js"></script>
 </head>
 <body>
-    <templ src="components/notification/notification.html"></templ>
-    <templ src="components/header/header.html"></templ>
-    <templ src="components/breadcrumbs/breadcrumbs.html"></templ>
-    <main class="main">
-        <article class="product-description">
-            <section class="product-description__gallary">
-                <img class="product-description__gallary-img" src="common/imgs/gallary/noname@1x_06.png" alt="noname">
-                <img class="product-description__gallary-img" src="common/imgs/gallary/noname@1x_01.png" alt="noname">
-                <img class="product-description__gallary-img" src="common/imgs/gallary/noname@1x_02.png" alt="noname">
-                <img class="product-description__gallary-img" src="common/imgs/gallary/noname@1x_03.png" alt="noname">
-                <img class="product-description__gallary-img" src="common/imgs/gallary/noname@1x_04.png" alt="noname">
-                <img class="product-description__gallary-img" src="common/imgs/gallary/noname@1x_05.png" alt="noname">
-
-            </section>
-            <section class="product-description__img-wrapper">
-                <img src="common/imgs/gallary/noname@1x_06.png" class="product-description__product-preview">
-            </section>
-            <form class="form product-description__form" action="#">
-                <h1 class="product-description__product-name">TACCUINO MAXI A RIGHE</h1>
-                <div class="product-description__product-price">€16.90</div>
-                <div class="product-description__product-producer">TACCUINO MAXI A RIGHE</div>
-                <div class="product-description__producer-logo icon_fsc-logo"></div>
-                <div class="product-description__input-wrapper">
-                    <span class="product-description__input-name">QT.</span><input class="input product-description__input_qty" type="number" required min="1" step="1">
-                </div>
-                <button class="btn btn_green product-description__btn" type="submit">ADD TO CART <span class="icon_arrow-right-green"></span></button>
-                <button class="btn btn_gray product-description__btn product-description__btn_add-to-cart" type="button"><span class="icon_pencil"></span> PERSONALIZZA</button>
-                <ul class="product-description__more-info more-info">
-                    <li>
-                        <span class="more-info__item">DETAILS <span class="icon_arrow-bottom-red"></span></span>
-                        <div class="more-info__content">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
-                    </li>
-                    <li>
-                        <span class="more-info__item">SHIPPING <span class="icon_arrow-bottom-red"></span></span>
-                        <div class="more-info__content">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
-                    </li>
-                    <li>
-                        <span class="more-info__item">RETURNS <span class="icon_arrow-bottom-red"></span></span>
-                        <div class="more-info__content">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
-                    </li>
-                </ul>
-                <ul class="product-description__social-links">
-                    <li class="">
-                        <a href="#" class="icon_facebook"></a>
-                    </li>
-                    <li class="">
-                        <a href="#" class="icon_twitter"></a>
-                    </li>
-                    <li class="">
-                        <a href="#" class="icon_printerest"></a>
-                    </li>
-                </ul> 
-            </form>
-        </article>
-        <div class="goods">
-            <div class="goods__header">
-                <h2 class="goods__slider-toggle goods__slider-toggle_current goods__slider-toggle_wear-with">
-                    WEAR WITH
-                </h2>
-                <h2 class="goods__slider-toggle goods__slider-toggle_also-like">
-                    YOU MAY ALSO LIKE
-                </h2>
+<templ src="components/notification/notification.html"></templ>
+<templ src="components/header/header.html"></templ>
+<templ src="components/breadcrumbs/breadcrumbs.html"></templ>
+<main class="main">
+    <article class="product-card">
+        <section class="product-card__gallery">
+            <img class="product-card__gallery-img" src="../src/images/gallery/noname@1x_06.png" alt="noname">
+            <img class="product-card__gallery-img" src="../src/images/gallery/noname@1x_05.png" alt="noname">
+            <img class="product-card__gallery-img" src="../src/images/gallery/noname@1x_04.png" alt="noname">
+            <img class="product-card__gallery-img" src="../src/images/gallery/noname@1x_03.png" alt="noname">
+            <img class="product-card__gallery-img" src="../src/images/gallery/noname@1x_02.png" alt="noname">
+            <img class="product-card__gallery-img" src="../src/images/gallery/noname@1x_01.png" alt="noname">
+        </section>
+        <section class="product-card__img-wrapper">
+            <img src="#" class="product-card__product-preview">
+        </section>
+        <form class="form product-card__form" action="#">
+            <h1 class="product-card__product-name">TACCUINO MAXI A RIGHE</h1>
+            <div class="product-card__product-price">€16.90</div>
+            <div class="product-card__product-producer">TACCUINO MAXI A RIGHE</div>
+            <div class="product-card__producer-logo icon_fsc-logo"></div>
+            <div class="product-card__input-wrapper">
+                <span class="product-card__input-name">QT.</span><input
+                    class="input product-card__input_qty" type="number" required min="1" step="1">
             </div>
-            <div class="goods__wear-with">
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_06.png" alt="" class="goods__img">
+            <button class="btn btn_green product-card__btn" type="submit">ADD TO CART <span
+                    class="icon_arrow-right-green"></span></button>
+            <button class="btn btn_gray product-card__btn product-card__btn_personalization" type="button">
+                <span class="icon_pencil"></span> PERSONALIZZA
+            </button>
+            <ul class="product-card__more-info more-info">
+                <li>
+                    <span class="more-info__item">DETAILS <span class="icon_arrow-bottom-red"></span></span>
+                    <div class="more-info__content">Many desktop publishing packages and web page editors now use Lorem
+                        Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+                        still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                        sometimes on purpose (injected humour and the like).
                     </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_06.png" alt="" class="goods__img">
+                </li>
+                <li>
+                    <span class="more-info__item">SHIPPING <span class="icon_arrow-bottom-red"></span></span>
+                    <div class="more-info__content">Many desktop publishing packages and web page editors now use Lorem
+                        Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+                        still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                        sometimes on purpose (injected humour and the like).
                     </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_06.png" alt="" class="goods__img">
+                </li>
+                <li>
+                    <span class="more-info__item">RETURNS <span class="icon_arrow-bottom-red"></span></span>
+                    <div class="more-info__content">Many desktop publishing packages and web page editors now use Lorem
+                        Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+                        still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                        sometimes on purpose (injected humour and the like).
                     </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_06.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_06.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-            </div>
-            <div class="goods__also-like">
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-                <article class="goods__item">
-                    <div class="goods__img-wrapper">
-                        <img src="common/imgs/gallary/noname@1x_05.png" alt="" class="goods__img">
-                    </div>
-                    <h1 class="goods__name">VHGVb bJBHJ</h1>
-                    <div class="goods__price">$9.90</div>
-                    <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
-                </article>
-            </div>
-
+                </li>
+            </ul>
+            <ul class="product-card__social-links">
+                <li class="">
+                    <a href="#" class="icon_facebook"></a>
+                </li>
+                <li class="">
+                    <a href="#" class="icon_twitter"></a>
+                </li>
+                <li class="">
+                    <a href="#" class="icon_printerest"></a>
+                </li>
+            </ul>
+        </form>
+    </article>
+    <div class="goods">
+        <div class="goods__header">
+            <h2 class="goods__slider-toggle goods__slider-toggle_current">
+                WEAR WITH
+            </h2>
+            <h2 class="goods__slider-toggle">
+                YOU MAY ALSO LIKE
+            </h2>
         </div>
-    </main>
-    <templ src="components/slider/slider.html"></templ>
-    <div class="flex">
-        <templ src="components/form/form_newsletter/form_newsletter.html"></templ>
-        <templ src="components/social-links/social-links.html"></templ>
+        <div class="goods__wear-with goods__slider goods__slider_visible">
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_06.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_06.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_06.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_06.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_06.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+        </div>
+        <div class="goods__also-like goods__slider">
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+            <article class="goods__item">
+                <div class="goods__img-wrapper">
+                    <img src="../src/images/gallery/noname@1x_05.png" alt="" class="goods__img">
+                </div>
+                <h1 class="goods__name">VHGVb bJBHJ</h1>
+                <div class="goods__price">$9.90</div>
+                <a href="#" class="goods__link">SHOP NOW <span class="icon_arrow-right-red"></span></a>
+            </article>
+        </div>
+
     </div>
-    <templ src="components/footer/footer.html"></templ> 
-    <article class="popup">
-       <form action="#" name="order">
+</main>
+<templ src="components/slider/slider.html"></templ>
+<div class="flex">
+    <templ src="components/form/form_newsletter/form_newsletter.html"></templ>
+    <templ src="components/social-links/social-links.html"></templ>
+</div>
+<templ src="components/footer/footer.html"></templ>
+<article class="popup">
+    <form action="#" name="order">
         <span class="popup__btn_close icon_close"></span>
 
         <header class="popup__header">TACCUINO MAXI A RIGHE</header>
         <div class="popup__content">
             <div class="popup__figure">
-               <div class="popup__img-wrapper">
-               <span class="popup__company-name">Company Name</span>
-               <img src="#" alt="current img" class="popup__current-img"></div>  
+                <div class="popup__img-wrapper">
+                    <span class="popup__company-name">Company Name</span>
+                    <img src="#" alt="current img" class="popup__current-img"></div>
             </div>
             <fieldset>
                 <div class="">INSERISCI IL TESTO</div>
                 <small>Max 20 caratteri</small>
-                <input type="text" class="input product-description__input product-description__input_logo-name" id="popup__logo-name" placeholder="Company Name" maxlength="20">  
+                <input type="text" class="input product-card__input product-card__input_logo-name"
+                       id="popup__logo-name" placeholder="Company Name" maxlength="20">
                 <div class="popup__val-char-wrapper">
                     <span class="popup__val-char">0</span>/20
                 </div>
                 <div class="">SCEGLI IL COLORE: <strong id="currentColor"></strong></div>
-                <div class="product-description__colors"> 
-                    <label class="colors-input colors-input_current colors-input_rosso"><input type="radio" id="colorRosso" name="bookColor" value="#ff1e00">
-                                <small>Rosso</small>
-                                </label>
-                                
-                    <label class="colors-input colors-input_blu"><input type="radio" id="colorBlu" name="bookColor" value="#0069b3">
-                                <small>Blu</small>
-                                </label>
-                    <label class="colors-input colors-input_oro"><input type="radio" id="colorOro" name="bookColor" value="#db9000">
-                                <small>Oro</small>
-                                </label>
-                    <label class="colors-input colors-input_argento"><input type="radio" id="colorArgento" name="bookColor" value="#dadada">
-                                <small>Argento</small>
-                                </label>
-                    <label class="colors-input colors-input_nero"><input type="radio" id="colorNero" name="bookColor" value="#000000">
-                                <small>Nero</small>
-                                </label>
+                <div class="product-card__colors">
+                    <label class="colors-input colors-input_current colors-input_rosso"><input type="radio"
+                                                                                               id="colorRosso"
+                                                                                               name="bookColor"
+                                                                                               value="#ff1e00">
+                        <small>Rosso</small>
+                    </label>
+
+                    <label class="colors-input colors-input_blu"><input type="radio" id="colorBlu" name="bookColor"
+                                                                        value="#0069b3">
+                        <small>Blu</small>
+                    </label>
+                    <label class="colors-input colors-input_oro"><input type="radio" id="colorOro" name="bookColor"
+                                                                        value="#db9000">
+                        <small>Oro</small>
+                    </label>
+                    <label class="colors-input colors-input_argento"><input type="radio" id="colorArgento"
+                                                                            name="bookColor" value="#dadada">
+                        <small>Argento</small>
+                    </label>
+                    <label class="colors-input colors-input_nero"><input type="radio" id="colorNero" name="bookColor"
+                                                                         value="#000000">
+                        <small>Nero</small>
+                    </label>
                 </div>
                 <div class="">SCEGLI FONT: <strong id="currentFont"></strong></div>
-                <div class="product-description__fonts ">
+                <div class="product-card__fonts ">
                     <label class="fonts-input fonts-input_current fonts-input_sans">
-                                <input type="radio" id="fontsSans" name="bookFont" value="Arial">
-                                <small>Sans</small>
-                                </label>
+                        <input type="radio" id="fontsSans" name="bookFont" value="Arial">
+                        <small>Sans</small>
+                    </label>
                     <label class="fonts-input fonts-input_serif">
-                                <input type="radio" id="fontsSerif" name="bookFont" value="Tmes New Roman">
-                                <small>Serif</small>
-                                </label>
-                    <div class="product-description__product-price">€16.90</div>
-                    <div class="product-description__product-price_additional">+ €5.00 personalizzazione</div>
+                        <input type="radio" id="fontsSerif" name="bookFont" value="Tmes New Roman">
+                        <small>Serif</small>
+                    </label>
+                    <div class="product-card__product-price">€16.90</div>
+                    <div class="product-card__product-price_additional">+ €5.00 personalizzazione</div>
                 </div>
-                <div class="product-description__input-wrapper">
-                    <span class="product-description__input-name">QT.</span><input class="input product-description__input_qty" type="number" required min="1" step="1">
+                <div class="product-card__input-wrapper">
+                    <span class="product-card__input-name">QT.</span><input
+                        class="input product-card__input_qty" type="number" required min="1" step="1">
                 </div>
                 <button class="popup__btn_submit" type="submit">CONFERMA E AGGIUNGI AL CARRELLO</button>
-                
+
             </fieldset>
         </div>
-        <footer class="popup__footer">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </footer> 
-        </form>
-    </article>
+        <footer class="popup__footer">There are many variations of passages of Lorem Ipsum available, but the majority
+            have suffered alteration in some form, by injected humour, or randomised words which don't look even
+            slightly believable. Internet tend to repeat predefined chunks as necessary, making this the first true
+            generator on the Internet.
+        </footer>
+    </form>
+</article>
 
 </body>
 
