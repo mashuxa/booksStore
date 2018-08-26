@@ -1,0 +1,61 @@
+$clr-primary: #ed1b24;
+$clr-secondary: #413c38;
+$clr-success: #42a62a;
+
+@font-face {
+  font-family: "Open Sans";
+  //src: local("Open Sans"), local("Open-Sans");
+  font-weight: bold;
+}
+
+@mixin placeholder($placeholder-color) {
+::-webkit-input-placeholder {
+  color: $placeholder-color;
+}
+
+::-moz-placeholder {
+  color: $placeholder-color;
+}
+
+:-moz-placeholder {
+  color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-color;
+}
+
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  &:hover,
+  &:active {
+    filter: brightness(0.95);
+  }
+  &_green {
+    background-color: #42a62a;
+  }
+  &_gray {
+    background-color: #463e3b;
+  }
+}

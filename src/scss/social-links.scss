@@ -1,0 +1,18 @@
+@import "variables";
+.social-links {
+  background-color: $clr-primary;
+  display: block;
+  padding: 0;
+  &__container {
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__items-wrapper {
+  }
+  &__item {
+    display: inline-block;
+    padding: 10px;
+  }
+}

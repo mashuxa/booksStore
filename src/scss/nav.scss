@@ -1,0 +1,17 @@
+@import "variables";
+.nav {
+  flex-shrink: 1;
+  &__item {
+    transition-duration: 0.3s;
+    padding: 10px 15px;
+    color: #0a0a0a;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    &:active,
+    &:hover,
+    &_active {
+      color: $clr-primary;
+    }
+  }
+}

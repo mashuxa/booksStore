@@ -1,0 +1,33 @@
+.colors-input {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 5px 10px 0;
+  &:before {
+    transition-duration: 0.3s;
+    display: block;
+    content: "";
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+  }
+  &_current:before {
+    border-color: black;
+  }
+  &_rosso:before {
+    background-color: #ff1e00;
+  }
+  &_blu:before {
+    background-color: #0069b3;
+  }
+  &_oro:before {
+    background-color: #db9000;
+  }
+  &_argento:before {
+    background-color: #dadada;
+  }
+  &_nero:before {
+    background-color: #000000;
+  }
+}

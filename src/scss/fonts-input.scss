@@ -1,0 +1,18 @@
+.fonts-input {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+  margin: 10px 10px 10px 0;
+  background-color: #ffffff;
+  &_current {
+    border-color: black;
+  }
+  &_sans {
+    font-family: "Arial";
+  }
+  &_serif {
+    font-family: "Times New Roman";
+  }
+}

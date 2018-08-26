@@ -1,0 +1,62 @@
+@import "variables";
+
+.form {
+  &_newsletter {
+    background-color: $clr-secondary;
+    @include placeholder(black);
+    &__input-wrapper {
+      width: 100%;
+      position: relative;
+      margin: 10px 0;
+    }
+    &__btn {
+      cursor: pointer;
+      position: absolute;
+      right: 27px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: none;
+    }
+    &__container {
+      margin-left: auto;
+    }
+  }
+  &_input {
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+  &_checkbox-label {
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  &_checkbox {
+    position: relative;
+    top: 1px;
+    visibility: hidden;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    &:checked {
+      &:before {
+        content: "✔";
+        color: #ffffff;
+        font-size: 2em;
+        line-height: 0.5em;
+      }
+    }
+    &:before {
+      visibility: visible;
+      display: inline-block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 1px solid #cdcdcd;
+    }
+  }
+}

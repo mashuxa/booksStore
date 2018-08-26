@@ -1,0 +1,22 @@
+@import 'variables';
+
+.bottom-menu {
+  @extend .container;
+  padding: 10px 10px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  &__li {
+    display: inline-block;
+    &:not(:last-of-type) .bottom-menu__item:after {
+      content: "|";
+      padding-left: 10px;
+    }
+  }
+  &__item {
+  }
+  &__wrapper {
+    padding: 15px 0;
+    background-color: $clr-secondary;
+    color: #ffffff;
+  }
+}
